@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Tipografias de letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <!-- Tipografias de letras -->
+    <link rel="stylesheet"  href="estilos.css">
+    <title>Document</title>
+ </head>
+ <body>
+    <header>
+        <div class="redes_header">
+        <a href="https://www.facebook.com/ruben.gonzalesgaytan" target="_BLANK"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/rb.g21/" target="_BLANK"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=5218112853806" target="_BLANK"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        <!-- Boton bars abrir modal -->
+        <!-- RECUERDA LA DIFERENCIA DEL ID Y CLASS -->
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Iniciar Sesion</button>
+        </div>
+    </header>
+    <script src="Animaciones.js"></script>
+    <!-- elemento para abrir/cerrar menu -->
+    <span onclick="openNav()"><i class="fa fa-bars" aria-hidden="true" style="font-size: 30px; cursor: pointer; padding: 10px; background-color: rgb(123, 238, 139); border-radius: 50%; margin: 10px;"></i></span>
+    <h3 style="display: inline-block;">Haz Click En El Menú</h3>
+    <h2 style="display: inline-block; margin-left: 250px;">BIENVENIDOS A MI PÁGINA WEB</h2>
+    <div id="myNav" class="overlay">
+        <!-- Boton para cerrar menú -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Contenido del Menu -->
+        <div class="contenido_menu">
+          <img src="imagenes/rubengzz.png" alt="" style="width: 150px; height: 150px;">
+          <hr width="100%" size="1" style="padding: 0; margin: 0;">
+          <a href="#"><i class="fa fa-home" aria-hidden="true" style="font-size: 20px; vertical-align: middle;"></i>Inicio</a>
+          <hr width="100%" size="1" style="padding: 0; margin: 0;">
+          <a href="#"><i class="fa fa-user" aria-hidden="true" style="font-size: 20px; vertical-align: middle;"></i>Servicios</a>
+          <hr width="100%" size="1" style="padding: 0; margin: 0;">
+          <a href="#"><i class="fa fa-users" aria-hidden="true" style="font-size: 20px; vertical-align: middle;"></i>Clientes</a>
+          <hr width="100%" size="1" style="padding: 0; margin: 0;">
+          <a href="#"><i class="fa fa-phone" aria-hidden="true" style="font-size: 20px; vertical-align: middle;"></i>Contactanos</a>
+          <hr width="100%" size="1" style="padding: 0; margin: 0;">
+        </div>
+
+    </div>
+    <br>
+
+   <div id="id01" class="modal">
+  
+   <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="imagenes/man-wearing-blue-shirt-illustration-png-clip-art.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+   </form>
+</div>
+</body>
+</html>
